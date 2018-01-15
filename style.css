@@ -6,6 +6,7 @@ body{
 .container{
     display: flex;
     justify-content: center;
+    margin-top: 15%;
 }
 
 #form_prijava input{
@@ -35,15 +36,17 @@ body{
     padding: 10px;
     margin-left: 50px;
     text-decoration: none;
-    color: black;
+    color: grey;
     border: 4px solid grey;
 }
 
 .button:focus{
     border: 4px solid darkred;
+    color: black;
     outline: none;
 }
 
 .button:hover{
     border: 4px solid darkred;
+    color: black;
 }
