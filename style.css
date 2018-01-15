@@ -1,0 +1,30 @@
+body{
+    background-color: #F2F2F2;
+    font-family: 'Roboto', sans-serif;
+    color: #585858;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+#form_prijava input{
+    margin: 2px;
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+#form_prijava label{
+    font-size: x-large;
+}
+#form_prijava{
+    display: flex;
+    flex-direction: column;
+}
+
+#form_prijava button{
+    font-size: xx-large;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
