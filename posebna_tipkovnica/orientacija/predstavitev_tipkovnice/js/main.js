@@ -25,6 +25,7 @@ window.addEventListener("keydown", function (event) {
       break;
     case "Escape":
           $("#escape").css("display", "block");
+          alert("123");
       break;
     default:
       return;
@@ -46,7 +47,8 @@ $(document.body).keydown(function(event) {
         keys["Enter"] = true;
     }
     if (keys["Esc"] && keys["Enter"]) {
-        $("#convert").trigger("click"); // or do anything else
+        window.location.href = "../index.html";
+        alert("123");
     }
 });
 

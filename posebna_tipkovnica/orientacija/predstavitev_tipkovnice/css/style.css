@@ -12,9 +12,10 @@
     border: 1px solid black;
     border-radius: 50%;
     background-color: green;
+    padding: 10px;
     position: absolute;
-    top: 250px;
-    left: 225px;
+    top: 230px;
+    left: 215px;
     filter: invert(0%);
 }
 
@@ -22,11 +23,12 @@
     display: none;
     width: 150px;
     left: 45px;
-    top: 400px;
+    top: 380px;
     transform: rotate(180deg);
     border: 1px solid black;
     border-radius: 50%;
     background-color: green;
+    padding: 10px;
     position: absolute;
     filter: invert(0%);
 }
@@ -37,7 +39,8 @@
     border: 1px solid black;
     border-radius: 50%;
     background-color: green;
-    top: 400px;
+    padding: 10px;
+    top: 380px;
     right: 45px;
     position: absolute;
     filter: invert(0%);
@@ -50,9 +53,10 @@
     border: 1px solid black;
     border-radius: 50%;
     background-color: green;
+    padding: 10px;
     position: absolute;
-    top: 540px;
-    left: 225px;
+    top: 520px;
+    left: 215px;
     filter: invert(0%);
 }
 
