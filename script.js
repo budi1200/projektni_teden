@@ -1,4 +1,5 @@
-document.getElementById("navadna").focus();
+//document.getElementById("navadna").focus();
+$("#navadna").focus();
 
 window.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {
@@ -8,11 +9,11 @@ window.addEventListener("keydown", function (event) {
     switch (event.key) {
         case "a":
         case "A":
-            document.getElementById("navadna").focus();
+           $("#navadna").focus();
             break;
         case "d":
         case "D":
-            document.getElementById("posebna").focus();
+            $("#posebna").focus();
             break;
         case "Escape":
             //window.history.back();
