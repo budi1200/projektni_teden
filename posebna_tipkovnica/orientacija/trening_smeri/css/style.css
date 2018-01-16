@@ -76,3 +76,11 @@
     left: 5px;
     top: 5px;
 }
+
+#pop-up {
+    display: none;
+    font-size: xx-large;
+    position: absolute;
+    top: 5px;
+    left: 180px;
+}
