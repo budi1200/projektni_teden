@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="sl">
+
 <head>
     <meta charset="UTF-8">
-    <title>Prijava</title>
+    <title>Avto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body>
 
+<body>
+    <div id="popup_wrapper">
+        <div id="popup_message">
+            <span id="popup_txt">asf</span>
+            <a id="try_again" onclick="location.reload()">Poskusi znova</a>
+            <span>Za izhod pritisni ****</span>
+        </div>
+    </div>
+    <div id="title">Povej, kakšne barve je avto!</div>
+    <div id="pic_wrapper">
+    <img id="avto" src="" alt="avto" width="200" height="200">
+    </div>
+    <div class="buttons">
+        <a id="red" href="#">Rdeč</a>
+        <a id="green" href="#">Zelen</a>
+        <a id="blue" href="#">Moder</a>
+        <a id="yellow" href="#">Rumen</a>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
