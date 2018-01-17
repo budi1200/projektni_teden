@@ -4,18 +4,12 @@ var width = $(window).width();
 var height = $(window).height();
 var ctx = canvas.getContext("2d");
 canvas.addEventListener('click', on_canvas_click, false);
-var rectangle = ["1", "2", "3"];
+canvas.width = width;
+canvas.height = height;
+var left;
+var right;
+var rectObj = {};
 //ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-var rectObj = {
-    rect: {
-        x: 0,
-        y: 0,
-        w: 0,
-        h: 0
-    },
-
-}
 
 function on_canvas_click(ev) {
     var clickX = ev.clientX - canvas.offsetLeft;
@@ -24,15 +18,17 @@ function on_canvas_click(ev) {
     for (var i = 1; i <= 10; i++) {
         if (clickX >= rectObj["rect" + i].x && clickX <= rectObj["rect" + i].x + rectObj["rect" + i].w && clickY >= rectObj["rect" + i].y && clickY <= rectObj["rect" + i].y + rectObj["rect" + i].h) {
             console.log("clicked in rect" + i);
+            console.log("left ", left);
+            console.log("right ", right);
+            if (i + right == left) {
+                alert("CONGRATS");
+            } else {
+                alert("Nope");
+            }
             break;
         }
-        console.log(rectObj["rect" + n]);
     }
-
 }
-
-canvas.width = width;
-canvas.height = height;
 
 // Velikost kocke
 var x1 = 20;
@@ -130,6 +126,35 @@ function drw(o, h, frame) {
     drawSq(o, h);
 }
 
+var n = 1;
+
+function generateSquare2(x, y, wx, wy, h, color, hei) {
+    ctx.rect(x - wx, y - h - (wx * 0.5 + wy * 0.5) - (hei - 1) * 25, 40, 46 + (hei - 1) * 25);
+    var rectX = x - wx;
+    var rectY = y - h - (wx * 0.5 + wy * 0.5) - (hei - 1) * 26;
+    var rectW = 40;
+    var rectH = 46 + (hei - 1) * 26;
+    console.log(rectX, " ", rectY, " ", rectW, " ", rectH);
+    rectObj["rect" + n] = {
+        x: rectX,
+        y: rectY,
+        w: rectW,
+        h: rectH
+    };
+    console.log(rectObj["rect" + n]);
+    n++;
+
+    /*console.log("X | ", x - wx);
+    console.log("Y | ", y - h - (wx * 0.5 + wy * 0.5) - (hei - 1) * 26);
+    console.log("W | ", 40);
+    console.log("H | ", 46 + (hei - 1) * 26);
+    console.log(y - h - (wx * 0.5 + wy * 0.5));*/
+    ctx.fillStyle = shadeColor(color, 20);
+    ctx.strokeStyle = shadeColor(color, 60);
+    ctx.stroke();
+    //ctx.fill();
+}
+
 function drawSq(o, hei) {
     var off = 60;
     var num = 0;
@@ -148,8 +173,8 @@ function drawSq(o, hei) {
 
 function generateRandomColumn() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    var left = randNum();
-    var right = randNum();
+    left = randNum();
+    right = randNum();
     if (right > left || right == left) {
         generateRandomColumn();
     } else {
@@ -210,32 +235,4 @@ function draw_all(frame) {
         }
         drawSq(a, i);
     }
-}
-var n = 1;
-
-function generateSquare2(x, y, wx, wy, h, color, hei) {
-    //ctx.rect(x - wx, y - h - (wx * 0.5 + wy * 0.5) - (hei - 1) * 25, 40, 46 + (hei - 1) * 25);
-    var rectX = x - wx;
-    var rectY = y - h - (wx * 0.5 + wy * 0.5) - (hei - 1) * 26;
-    var rectW = 40;
-    var rectH = 46 + (hei - 1) * 26;
-    console.log(rectX, " ", rectY, " ", rectW, " ", rectH);
-    rectObj["rect" + n] = {
-        x: rectX,
-        y: rectY,
-        w: rectW,
-        h: rectH
-    };
-    n++;
-
-    /*console.log("X | ", x - wx);
-    console.log("Y | ", y - h - (wx * 0.5 + wy * 0.5) - (hei - 1) * 26);
-    console.log("W | ", 40);
-    console.log("H | ", 46 + (hei - 1) * 26);
-    console.log(y - h - (wx * 0.5 + wy * 0.5));*/
-    ctx.fillStyle = shadeColor(color, 20);
-    ctx.strokeStyle = shadeColor(color, 60);
-    ctx.stroke();
-    //ctx.fill();
-    //console.log(x - wx, y - h - (wx * 0.5 + wy * 0.5));
 }
