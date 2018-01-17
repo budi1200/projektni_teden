@@ -7,7 +7,7 @@
     position: relative;
 }
 #arrow-up {
-    display: none;
+    /*display: none;*/
     width: 150px;
     transform: rotate(270deg);
     border: 3px solid black;
@@ -21,7 +21,7 @@
 }
 
 #arrow-left {
-    display: none;
+    /*display: none;*/
     width: 150px;
     left: 45px;
     top: 380px;
@@ -35,7 +35,7 @@
 }
 
 #arrow-right {
-    display: none;
+    /*display: none;*/
     width: 150px;
     border: 3px solid black;
     border-radius: 50%;
@@ -48,7 +48,7 @@
 }
 
 #arrow-down {
-    display: none;
+    /*display: none;*/
     width: 150px;
     transform: rotate(90deg);
     border: 3px solid black;
@@ -62,7 +62,7 @@
 }
 
 #enter {
-    display: none;
+   /*display: none;*/
     width: 150px;
     position: absolute;
     top: 5px;
@@ -70,10 +70,17 @@
 }
 
 #escape {
-    display: none;
+    /*display: none;*/
     width: 150px;
     position: absolute;
     left: 5px;
     top: 5px;
+}
+
+#pop-up {
     display: none;
+    font-size: xx-large;
+    position: absolute;
+    top: 5px;
+    left: 180px;
 }
