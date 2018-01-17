@@ -46,21 +46,26 @@ $(".buttons a").click(function () {
     if (barva == clicked) {
         console.log("prav");
         $("#popup_txt").html("Pravilen Odgovor!").css("color", "green");
-        $("#popup_wrapper").css("display", "flex");
     } else {
         console.log("narobe");
         $("#popup_txt").html("Napačen Odgovor!").css("color", "red");
-        $("#popup_wrapper").css("display", "flex");
     }
+    $("#popup_wrapper").css("display", "flex");
     $("#try_again").focus();
+    console.log($("#try_again").focus());
 });
 
 $("#avto").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
     function () {
-        console.log("done");
+        if(!popup){
+            $("#popup_txt").html("Čas je potekel").css("color", "grey");
+            $("#popup_wrapper").css("display", "flex");
+            $("#try_again").focus();
+        }
     });
 
 function change_focus(a) {
+    if(!popup){
     switch (a) {
         case '-':
             i--;
@@ -77,6 +82,10 @@ function change_focus(a) {
         i = 3;
     }
     $(ar[i]).focus();
+    }else if(popup){
+        console.log(a);
+        $("#try_again").focus();
+    }
 }
 window.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {
