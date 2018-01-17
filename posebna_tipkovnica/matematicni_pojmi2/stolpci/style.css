@@ -8,5 +8,5 @@ body{
 }
 
 #pos{
-    position: absolute;
+    position: fixed;
 }
