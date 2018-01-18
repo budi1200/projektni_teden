@@ -18,13 +18,16 @@ function on_canvas_click(ev) {
     for (var i = 1; i <= 10; i++) {
         if (clickX >= rectObj["rect" + i].x && clickX <= rectObj["rect" + i].x + rectObj["rect" + i].w && clickY >= rectObj["rect" + i].y && clickY <= rectObj["rect" + i].y + rectObj["rect" + i].h) {
             console.log("clicked in rect" + i);
-            console.log("left ", left);
-            console.log("right ", right);
             if (i + right == left) {
-                alert("CONGRATS");
+                $("#button-try_again").css("display", "none");
+                $("#popup-text").html("Pravilen odgovor!");
+                $("#popup-text").css("color", "green");
             } else {
-                alert("Nope");
+                $("#button-try_again").css("display", "");
+                $("#popup-text").html("Napačen odgovor!");
+                $("#popup-text").css("color", "red");
             }
+            $("#popup-wrapper").css("display", "flex");
             break;
         }
     }
@@ -129,7 +132,7 @@ function drw(o, h, frame) {
 var n = 1;
 
 function generateSquare2(x, y, wx, wy, h, color, hei) {
-    ctx.rect(x - wx, y - h - (wx * 0.5 + wy * 0.5) - (hei - 1) * 25, 40, 46 + (hei - 1) * 25);
+    //ctx.rect(x - wx, y - h - (wx * 0.5 + wy * 0.5) - (hei - 1) * 25, 40, 46 + (hei - 1) * 25);
     var rectX = x - wx;
     var rectY = y - h - (wx * 0.5 + wy * 0.5) - (hei - 1) * 26;
     var rectW = 40;
@@ -235,4 +238,13 @@ function draw_all(frame) {
         }
         drawSq(a, i);
     }
+}
+
+function try_again(){
+    $("#popup-wrapper").css("display", "none");
+}
+
+function new_game(){
+    generateRandomColumn();
+    $("#popup-wrapper").css("display", "none");
 }
