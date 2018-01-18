@@ -107,6 +107,9 @@ window.addEventListener("keydown", function (event) {
             event.preventDefault();
             break;
         case "Enter":
+            if(keys.Esc == true){
+                event.preventDefault();
+            }
             keys['Enter'] = true;
             CheckEsc();
             break;
