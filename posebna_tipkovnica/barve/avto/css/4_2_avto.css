@@ -1,15 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
 body{
-    background-color: #707070;
-}
-
-#pos{
-    position: fixed;
+    overflow: hidden;
+    background-color: #F2F2F2;
+    margin: 0;
 }
 
 a {
@@ -18,18 +10,59 @@ a {
     font-size: xx-large;
     margin: 10px;
     border: 4px solid rgba(0,0,0,0.25);
-    color: grey;
+    color: #e3e3e3;
     text-decoration: none;
-    width: 140px;
 }
 
 a:focus{
     outline: none;
     color: black;
-    border: 4px solid darkred;
+    border: 4px solid rgba(0,0,0,0.25);
 }
 
-#popup-wrapper {
+#red{
+    background-color: #BF0000;
+}
+#red:focus{
+    background-color: #f71d1d;
+}
+
+#green{
+    background-color: #006000;
+}
+
+#green:focus{
+    background-color: #00a100;
+}
+
+#blue{
+    background-color: #0424BF;
+}
+#blue:focus{
+    background-color: #284CFF;
+}
+
+#yellow{
+    background-color: #BFBF00;
+}
+#yellow:focus{
+    background-color: #FFFF00;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#title {
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+#popup_wrapper {
     display: none;
     position: absolute;
     top: 0;
@@ -38,12 +71,13 @@ a:focus{
     justify-content: center;
     background-color: rgba(0,0,0,0.25);
     z-index: 22;
-    align-items: center;
 }
 
-#popup-box {
+#popup_message {
     position: relative;
     background-color: #F2F2F2;
+    margin-top: 100px;
+    padding: 20px;
     width: 500px;
     height: 200px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -52,11 +86,20 @@ a:focus{
     text-align: center;
     font-size: xx-large;
     align-items: center;
-    padding: 20px;
+    padding-top: 20px;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s;
+}
+
+#try_again {
+    width: 50%;
+    color: black;
+}
+
+#try_again:focus{
+    border: 4px solid darkred;
 }
 
 @-webkit-keyframes animatetop {
@@ -67,9 +110,4 @@ a:focus{
 @keyframes animatetop {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
-}
-
-#popup-button-wrapper {
-    display: inline-flex;
-    align-items: center;
 }
