@@ -84,3 +84,32 @@
     top: 5px;
     left: 180px;
 }
+
+#navodila {
+    background-color: #e0e0e0;
+    padding: 3px;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 620px;
+    width: 400px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#gumb-navodila {
+    margin-bottom: 3px;
+    position: absolute;
+    top: 0px;
+    left: 620px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    width: 130px;
+    height: 50px;
+    background-color: #229628;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
