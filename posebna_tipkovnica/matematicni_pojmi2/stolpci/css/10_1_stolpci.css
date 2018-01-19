@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #707070;
+    background-color: #9f9f9f;
     overflow: hidden;
 }
 
@@ -73,4 +73,9 @@ a:focus{
 #popup-button-wrapper {
     display: inline-flex;
     align-items: center;
+}
+
+#navodilo {
+    margin: 10px;
+    position: fixed;
 }

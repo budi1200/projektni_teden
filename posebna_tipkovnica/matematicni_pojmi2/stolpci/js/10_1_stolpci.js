@@ -219,6 +219,8 @@ function try_again() {
 }
 
 function new_game() {
+    cursorX = width/2;
+    cursorY = height/2;
     generateRandomColumn();
     $("#popup-wrapper").css("display", "none");
     popup = false;
@@ -312,7 +314,7 @@ function checkCursorPos() {
             if (keys.Enter == true) {
                 if (i + right == left) {
                     $("#button-try_again").css("display", "none");
-                    $("#popup-text").html("Pravilen odgovor!");
+                    $("#popup-text").html("Bravo! Pravilen Odgovor!");
                     $("#popup-text").css("color", "green");
                     $("#popup-wrapper").css("display", "flex");
                     $("#button-new_game").focus();
