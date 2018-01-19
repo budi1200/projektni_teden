@@ -168,7 +168,10 @@ function CheckEsc(){
        // keys["Enter"] = false;
        // $(object).css("transition", "none");
         window.location.href = "../index.html";
-    }
+    }else{
+		keys["Esc"] = false;
+		keys["Enter"] = false;
+	}
 }
 
 function Navodila(){

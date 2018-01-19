@@ -1,22 +1,20 @@
-//document.getElementById("navadna").focus();
-$("#navadna").focus();
+$("#tipkovnica-navadna").focus();
 
 window.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {
-        return; // Do nothing if the event was already processed
+        return;
     }
 
     switch (event.key) {
         case "a":
         case "A":
-           $("#navadna").focus();
+           $("#tipkovnica-navadna").focus();
             break;
         case "d":
         case "D":
-            $("#posebna").focus();
+            $("#tipkovnica-posebna").focus();
             break;
         case "Escape":
-            //window.history.back();
             window.location.href = 'index.html';
             break;
 

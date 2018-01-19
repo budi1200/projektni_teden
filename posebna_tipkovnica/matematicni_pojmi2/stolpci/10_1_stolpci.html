@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stolpci</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/10_1_stolpci.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="popup-wrapper">
+        <div id="popup-box">
+            <span id="popup-text">Pravilen Odgovor!</span>
+            <div id="popup-button-wrapper">
+            <a id="button-try_again" onclick="try_again()" href="#">Poskusi znova</a>
+            <a id="button-new_game" onclick="new_game()" href="#">Nova<br>Igra</a>
+            </div>
+            <span>Za izhod pritisni rdeč in rumen gumb</span>
+        </div>
+    </div>
+    <div id="navodilo">Kocki, ki ni pobarvana, dodaj še toliko kock, da bo stolpec enak prvemu.</div>
+    <canvas id="main_canv">
+    </canvas>
+    <img id="cursor" style="display: none" src="Slike/cursor.png">
+    <script src="js/10_1_stolpci.js"></script>
+    <script>
+        generateRandomColumn();
+    </script>
+</body>
+
+</html>
