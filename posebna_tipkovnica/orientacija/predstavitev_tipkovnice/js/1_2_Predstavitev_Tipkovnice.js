@@ -78,11 +78,11 @@ if (event.defaultPrevented) {
     return;
 }
     //keys["Esc"] = false;
-    switch(event.keyCode){
-        case 27:
+    switch(event.key){
+        case "Escape":
             keys["Esc"] = false;
             break;
-        case 13:
+        case "Enter":
             keys["Enter"] = false;
             break;
         default:
@@ -92,3 +92,20 @@ if (event.defaultPrevented) {
     event.preventDefault();
 }, true);
 
+function Navodila(){
+    var x = $("#navodila").css("display");
+    if(x == "none"){
+        $("#navodila").css("display", "block");
+        localStorage.setItem('Neki', "block");
+        //localStorage.setItem('Neki', KrEna);
+    }
+    else if(x == "block"){
+        $("#navodila").css("display", "none");
+        //KrEna = "none";
+        localStorage.setItem('Neki', "none");
+        //localStorage.setItem('Neki', KrEna);
+    }
+    else{
+        console.log(x);
+    }
+}

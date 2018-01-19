@@ -12,6 +12,19 @@ var ar = [
 var i = 0;
 var izbranaSmer = "";
 var StageOne = false;
+//localStorage.setItem('Neki', "1");
+
+//JS LocalStorage
+
+if(localStorage.getItem('Neki') == "block")
+{
+    $("#navodila").css("display", localStorage.getItem('Neki'));
+}
+else if(localStorage.getItem('Neki') == "none")
+{
+    $("#navodila").css("display", localStorage.getItem('Neki'));
+}
+else{}
 
 $("#button-up").focus();
 
@@ -155,5 +168,23 @@ function CheckEsc(){
        // keys["Enter"] = false;
        // $(object).css("transition", "none");
         window.location.href = "../index.html";
+    }
+}
+
+function Navodila(){
+    var x = $("#navodila").css("display");
+    if(x == "none"){
+        $("#navodila").css("display", "block");
+        localStorage.setItem('Neki', "block");
+        //localStorage.setItem('Neki', KrEna);
+    }
+    else if(x == "block"){
+        $("#navodila").css("display", "none");
+        //KrEna = "none";
+        localStorage.setItem('Neki', "none");
+        //localStorage.setItem('Neki', KrEna);
+    }
+    else{
+        console.log(x);
     }
 }

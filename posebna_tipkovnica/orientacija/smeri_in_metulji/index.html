@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
+    <script src="../../../jquery-3.2.1.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Prijava</title>
 </head>
 <body>
-
+    <div id="main">
+        <a href="#" class="button-link" id="button-up"><img class="button" id="arrow-up" src="../../../img/arrowright.png" alt="AU"></a>
+        <a href="#" class="button-link" id="button-left"><img class="button" id="arrow-left" src="../../../img/arrowright.png" alt="AL"></a>
+        <a href="#" class="button-link" id="button-down"><img class="button" id="arrow-down" src="../../../img/arrowright.png" alt="AD"></a>
+        <a href="#" class="button-link" id="button-right"><img class="button" id="arrow-right" src="../../../img/arrowright.png" alt="AR"></a>
+        <button id="gumb-navodila" onclick="Navodila()">Navodila</button>
+        <div id="navodila">
+            Otrok pritisne na enako tipko. Iz tipke se premakne puščica v določeno smer. Povratna informacija je vidna in tudi slušna - hkrati zasliši ime smeri.
+        </div>
+        <img id="metulj" src="" alt="METULJ">
+    </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
