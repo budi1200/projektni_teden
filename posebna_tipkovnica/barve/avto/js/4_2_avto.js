@@ -1,4 +1,4 @@
-$("#red").focus();
+﻿$("#red").focus();
 var ar = ["#red", "#green", "#blue", "#yellow"];
 var i = 0;
 var barva = 0;
@@ -14,22 +14,22 @@ $(document).ready(function () {
     switch (rand) {
         case 1:
             //console.log("1 - rdeca");
-            avto.attr("src", "Slike/avto_red.png");
+            avto.attr("src", "../Slike/4_2_avto/avto_red.png");
             barva = "red";
             break;
         case 2:
             //console.log("2 - zelena");
-            avto.attr("src", "Slike/avto_green.png");
+            avto.attr("src", "../Slike/4_2_avto/avto_green.png");
             barva = "green";
             break;
         case 3:
             //console.log("3 - modra");
-            avto.attr("src", "Slike/avto_blue.png");
+            avto.attr("src", "../Slike/4_2_avto/avto_blue.png");
             barva = "blue";
             break;
         case 4:
             //console.log("4 - rumena");
-            avto.attr("src", "Slike/avto_yellow.png");
+            avto.attr("src", "../Slike/4_2_avto/avto_yellow.png");
             barva = "yellow";
             break;
         default:
